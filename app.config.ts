@@ -1,7 +1,7 @@
-import { defineConfig } from 'vinxi'
+import { createApp } from 'vinxi'
 import { tanstackStart } from '@lovable.dev/vite-tanstack-config'
 
-export default defineConfig({
+export default createApp({
   routers: {
     client: {
       type: 'client',
