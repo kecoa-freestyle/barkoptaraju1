@@ -1,15 +1,20 @@
 {
   "version": 2,
+  "framework": "tanstack-start",
   "builds": [
     {
-      "src": "package.json",
+      "src": ".output/server/index.mjs",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
+      "src": "/_vinxi/(.*)",
+      "dest": "/_vinxi/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": ".output/server/index.mjs"
     }
   ]
 }
